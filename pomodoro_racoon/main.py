@@ -2,6 +2,7 @@ import time
 import threading
 import os
 import platform
+import math
 
 # Timer settings
 work_duration = 25 * 60  # 25 minutes
@@ -16,12 +17,12 @@ def play_sound(sound_type="beep"):
     sound_type: "beep" für einfachen Piep, "start" für Timer-Start, "end" für Timer-Ende
     """
     try:
-        system = platform.system().lower()
+    system = platform.system().lower()
         
         if sound_type == "start":
             # Drei kurze Pieptöne für Start
             for _ in range(3):
-                print('\a', end='', flush=True)
+                print('\a', end='', flush=True)    
                 time.sleep(0.2)
         elif sound_type == "end":
             # Längerer Signalton für Ende
@@ -95,6 +96,8 @@ frames = [
      / >🍰   Geschafft!
     """
 ]
+
+hanswurst = 1
 
 # Pause frames (Waschbär in der Pause)
 break_frames = [
